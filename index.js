@@ -11,7 +11,7 @@ program
   .option('-m, --methods <methods>', 'list of methods accordingly to endpoints')
   .parse(process.argv);
 
-if (program.args.length < 3) {
+if (process.argv.length < 8 || process.argv.length > 8) {
   console.error(chalk.red('All arguments are required'));
   process.exit();
 }
