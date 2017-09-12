@@ -1,0 +1,16 @@
+{
+  "name": "t-rex-api-generator",
+  "version": "1.0.0",
+  "description": "A command-line tool for generating API easily",
+  "main": "index.js",
+  "repository": "https://github.com/wlisrausr/t-rex-api-generator",
+  "author": "Wanda Ichsanul Isra",
+  "license": "MIT",
+  "bin": {
+    "t-rex": "./index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^2.11.0"
+  }
+}
