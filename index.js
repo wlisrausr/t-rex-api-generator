@@ -28,7 +28,7 @@ if (program.framework) {
   if (program.framework.toLowerCase() === 'laravel') {
     endpoints.forEach(function(endpoint, index) {
       console.log(chalk.green(`API route for ${endpoint} generated`));
-      
+
       if (methods[index] === undefined) {
         fs.appendFileSync('routes/api.php', `\nRoute::get('/${endpoint}', function () {\n});\n`);
       } else {
@@ -58,7 +58,7 @@ if (program.framework) {
   } else if (program.framework.toLowerCase() === 'flask') {
     endpoints.forEach(function(endpoint, index) {
       console.log(chalk.green(`API route for ${endpoint} generated`));
-      
+
       if (methods[index] === undefined) {
         fs.appendFileSync('app/routes/api.py', `\n@api.route('/${endpoint}', methods=['GET'])\ndef def_name():\n    return 'something'\n`);
       } else {
@@ -66,7 +66,7 @@ if (program.framework) {
       }
     })
   }
-    
+
   console.log(chalk.green('\nAll API boilerplate succesfully generated'));
 } else {
   console.error(chalk.red('Framework name is required'));
